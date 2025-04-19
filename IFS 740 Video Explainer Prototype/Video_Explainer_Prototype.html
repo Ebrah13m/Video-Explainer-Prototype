@@ -1,44 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Simple Job Contract Explainer</title>
-  <link rel="stylesheet" href="CSS/style.css" />
-  <script src="Javascript/MultiLingual.js"></script>
-</head>
-  <body>
-    <div class="container">
-      <h1 id="title">Simple Job Contract Explainer</h1>
-  
-      <label for="language-select">Choose Language:</label>
-      <select id="language-select" onchange="switchLanguage()">
-        <option value="en">English</option>
-        <option value="xh">isiXhosa</option>
-        <option value="af">Afrikaans</option>
-      </select>
-  
-      <iframe src="https://www.youtube.com/embed/your_video_id" allowfullscreen></iframe>
-  
-      <div class="info-section">
-        <div class="info-title" onclick="toggleSection(this)" data-key="workingHours"></div>
-        <div class="info-content" data-key="workingHoursText"></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Job Contract Explainer</title>
+    <link rel="stylesheet" href="CSS/style.css" />
+    <script src="Javascript/MultiLingual.js"></script>
+  </head>
+    <body>
+      <div class="container">
+        <h1 id="title">Simple Job Contract Explainer</h1>
+    
+        <label for="language-select">Choose Language:</label>
+        <select id="language-select" onchange="switchLanguage()">
+          <option value="en">English</option>
+          <option value="xh">isiXhosa</option>
+          <option value="af">Afrikaans</option>
+        </select>
+    
+        <iframe src="https://www.youtube.com/embed/your_video_id" allowfullscreen></iframe>
+    
+        <div class="info-section">
+          <div class="info-title" onclick="toggleSection(this)" data-key="workingHours"></div>
+          <div class="info-content" data-key="workingHoursText"></div>
+        </div>
+    
+        <div class="info-section">
+          <div class="info-title" onclick="toggleSection(this)" data-key="pay"></div>
+          <div class="info-content" data-key="payText"></div>
+        </div>
+    
+        <div class="info-section">
+          <div class="info-title" onclick="toggleSection(this)" data-key="leave"></div>
+          <div class="info-content" data-key="leaveText"></div>
+        </div>
+    
+        <div class="info-section">
+          <div class="info-title" onclick="toggleSection(this)" data-key="termination"></div>
+          <div class="info-content" data-key="terminationText"></div>
+        </div>
       </div>
-  
-      <div class="info-section">
-        <div class="info-title" onclick="toggleSection(this)" data-key="pay"></div>
-        <div class="info-content" data-key="payText"></div>
-      </div>
-  
-      <div class="info-section">
-        <div class="info-title" onclick="toggleSection(this)" data-key="leave"></div>
-        <div class="info-content" data-key="leaveText"></div>
-      </div>
-  
-      <div class="info-section">
-        <div class="info-title" onclick="toggleSection(this)" data-key="termination"></div>
-        <div class="info-content" data-key="terminationText"></div>
-      </div>
-    </div>
-  </body>
+    </body>
 </html>

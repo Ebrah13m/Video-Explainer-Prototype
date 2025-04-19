@@ -38,25 +38,36 @@ function switchLanguage() {
   const lang = document.getElementById('language-select').value;
   const t = translations[lang];
 
-  document.getElementById('title').textContent = t.title;
-
-  document.querySelectorAll('.info-section').forEach(section => {
-    const titleEl = section.querySelector('.info-title');
-    const contentEl = section.querySelector('.info-content');
-
-    const titleKey = titleEl.getAttribute('data-key');
-    const contentKey = contentEl.getAttribute('data-key');
-
-    titleEl.textContent = t[titleKey];
-    contentEl.textContent = t[contentKey];
+  // Update the text content
+  document.getElementById('title').innerText = t.title;
+  document.querySelectorAll('[data-key]').forEach(el => {
+    const key = el.getAttribute('data-key');
+    el.innerText = t[key];
   });
-}
 
+  // Update video source
+  const videoSource = document.getElementById('video-source');
+  const video = document.getElementById('contract-video');
+
+  switch (lang) {
+    case 'en':
+      videoSource.src = 'videos/english.mp4';
+      break;
+    case 'xh':
+      videoSource.src = 'videos/english.mp4'; //Xhosa
+      break;
+    case 'af':
+      videoSource.src = 'videos/english.mp4'; //Afrikaans
+      break;
+  }
+
+  video.load(); // Reload video with new source
+}
 
 function toggleSection(element) {
   const content = element.nextElementSibling;
   content.style.display = content.style.display === 'block' ? 'none' : 'block';
 }
 
-// Load default language
+// Load default language when page loads
 document.addEventListener('DOMContentLoaded', switchLanguage);

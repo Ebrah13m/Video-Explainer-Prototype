@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Simple Job Contract Explainer</title>
   <link rel="stylesheet" href="CSS/style.css" />
 </head>
@@ -17,29 +17,41 @@
       <option value="af">Afrikaans</option>
     </select>
 
-    <video id="contract-video" width="100%" height="400" controls>
+    <video id="contract-video" controls>
       <source id="video-source" src="videos/english.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
 
-    <div class="info-section">
-      <div class="info-title" onclick="toggleSection(this)" data-key="workingHours"></div>
+    <details class="info-section">
+      <summary class="info-title" data-key="workingHours"></summary>
       <div class="info-content" data-key="workingHoursText"></div>
-    </div>
+    </details>
 
-    <div class="info-section">
-      <div class="info-title" onclick="toggleSection(this)" data-key="pay"></div>
+    <details class="info-section">
+      <summary class="info-title" data-key="pay"></summary>
       <div class="info-content" data-key="payText"></div>
-    </div>
+    </details>
 
-    <div class="info-section">
-      <div class="info-title" onclick="toggleSection(this)" data-key="leave"></div>
+    <details class="info-section">
+      <summary class="info-title" data-key="leave"></summary>
       <div class="info-content" data-key="leaveText"></div>
+    </details>
+
+    <details class="info-section">
+      <summary class="info-title" data-key="termination"></summary>
+      <div class="info-content" data-key="terminationText"></div>
+    </details>
+
+    <div class="extra-buttons">
+      <button onclick="startQuiz()">📝 Take a Quiz</button>
+      <button onclick="openLegalSupport()">📞 Legal Help</button>
     </div>
 
-    <div class="info-section">
-      <div class="info-title" onclick="toggleSection(this)" data-key="termination"></div>
-      <div class="info-content" data-key="terminationText"></div>
+    <div id="quiz-section" style="display: none;">
+      <p id="quiz-question"></p>
+      <form id="quiz-options"></form>
+      <button onclick="checkAnswer()">Submit Answer</button>
+      <p id="quiz-result"></p>
     </div>
   </div>
 
